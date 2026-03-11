@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sensorApp</title>
+    <link rel="stylesheet" href="sensor.css">
+</head>
+<body>
+
+    <main>
+        <p><h2>SensorApp</h2></p>
+        <input id="input" type="text">
+        <button onclick="clickWord()">SENSOR</button>
+        <div id="words"></div>
+    </main>
+    
+</body>
+</html>
+<script>
+    let input = document.getElementById('input')
+    let div = document.getElementById('words')
+    // console.log(input,words);
+
+    // sensored words : stupid ,fool , crazy ,lazy 
+    
+    function clickWord(params) {
+        let userText = input.value.toLowerCase()
+        let resultValue = userText.replaceAll('stupid','******').replaceAll('fool','******')
+        .replaceAll('crazy','******').replaceAll('lazy','******') ;
+        div.innerHTML = resultValue
+        
+    }
+</script>
